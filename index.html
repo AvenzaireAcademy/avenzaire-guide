@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b10">
+  <meta name="description" content="Не знаешь, что выбрать: код или дизайн? 10 спокойных вопросов помогут наметить первый шаг. Бесплатная консультация Avenzaire Academy — без обязательной покупки.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Найди свой первый шаг · Avenzaire Academy</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./site-config.js" defer></script>
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<div class="ambient" aria-hidden="true"></div>
+<header class="site-header wrap">
+  <a class="brand" href="./" aria-label="Avenzaire Academy — начало"><img src="./assets/brand.png" width="176" height="115" alt="Avenzaire Academy"></a>
+  <div class="header-right"><span class="availability"><span aria-hidden="true"></span> Бесплатно</span><button class="quiet" data-open-privacy>О данных</button></div>
+</header>
+<main id="main" class="wrap" tabindex="-1">
+  <section id="intro" aria-labelledby="hero-title">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">НАПРАВЛЕНИЕ НАЧИНАЕТСЯ С ИНТЕРЕСА</p>
+        <h1 id="hero-title">Не выбирай<br><span>вслепую.</span></h1>
+        <p class="lead">Код, дизайн или пока «не знаю»?<br>Давай найдём то, что хочется попробовать.</p>
+        <p class="hero-note">10 коротких вопросов — и понятный первый шаг. А если останутся сомнения, разберём их на бесплатной консультации.</p>
+        <button id="start" class="button primary">Найти свой первый шаг <span aria-hidden="true">↗</span></button>
+        <div class="hero-meta"><span>3–4 минуты</span><span>Без регистрации</span><span>Без обязательной покупки</span></div>
+      </div>
+      <div class="hero-art" aria-label="Код, дизайн и возможность сначала попробовать">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="glass-title"><span class="status-light" aria-hidden="true"></span> ТВОЯ ТОЧКА СТАРТА</div>
+        <div class="path-card code-card"><span class="metal-icon" aria-hidden="true">&lt;/&gt;</span><div><span class="card-kicker">РАЗОБРАТЬСЯ, КАК РАБОТАЕТ</span><h2>Создавать код</h2><p>Логика. Эксперименты. Свои программы.</p></div></div>
+        <div class="path-card design-card"><span class="metal-icon" aria-hidden="true">✳</span><div><span class="card-kicker">СДЕЛАТЬ ПОНЯТНЕЕ И УДОБНЕЕ</span><h2>Проектировать дизайн</h2><p>Экраны. Сценарии. Детали.</p></div></div>
+        <div class="floating-note"><span aria-hidden="true">↗</span> Не знать заранее — нормально.</div>
+        <div class="art-footer"><span class="mini-dots" aria-hidden="true">● ● ●</span> Не ярлык. Начало пути.</div>
+      </div>
+    </div>
+    <div class="trust-strip"><p><strong>Сначала — ты, не курс.</strong><span>Посмотрим на интересы, а не на «правильные» ответы.</span></p><p><strong>Проба вместо обещаний.</strong><span>Предложим маленькое действие, а не профессию навсегда.</span></p><p><strong>Человек рядом.</strong><span>Можно обсудить результат с командой школы.</span></p></div>
+    <section class="consult-section" aria-labelledby="consult-title"><div><p class="eyebrow">МОЖНО СРАЗУ ПОГОВОРИТЬ</p><h2 id="consult-title">Не тест решает.<br>Решаешь ты.</h2></div><div><p>На бесплатной консультации обсудим, что тебе интересно, чем отличаются направления и с какой небольшой задачи начать. Проходить опросник необязательно.</p><a class="button secondary consultation-link" href="https://t.me/AvenzaireEDU" target="_blank" rel="noopener noreferrer">Написать о консультации <span aria-hidden="true">↗</span></a><p class="fine">Начнём с переписки в Telegram. Формат и время согласуем отдельно. Мгновенный ответ не обещаем.</p></div></section>
+  </section>
+
+  <section id="quiz" class="quiz-view" hidden aria-labelledby="question-title">
+    <div class="quiz-top"><button id="exit-quiz" class="quiet">← На главную</button><span id="question-count">Вопрос 1 из 10</span></div>
+    <div class="progress-track" role="progressbar" aria-label="Прогресс опросника" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><div id="progress-fill"></div></div>
+    <div class="question-heading"><p class="eyebrow" id="question-category">ТВОЙ ИНТЕРЕС</p><h1 id="question-title" tabindex="-1"></h1><p id="question-hint" class="muted"></p></div>
+    <fieldset id="answers"><legend class="sr-only">Выбери один вариант</legend></fieldset>
+    <p id="selection-error" class="error" role="alert" hidden>Выбери один вариант. «Пока не знаю» тоже подходит.</p>
+    <div class="quiz-nav"><button id="back" class="button secondary">← Назад</button><button id="next" class="button primary" disabled>Дальше <span aria-hidden="true">→</span></button></div>
+    <p class="quiz-foot">Нет правильных ответов. Можно вернуться и передумать.<br>Ответы хранятся только в текущей вкладке — после обновления страницы исчезнут.</p>
+  </section>
+
+  <section id="result" class="result-view" hidden aria-labelledby="result-title">
+    <p class="eyebrow">НЕ ПРИГОВОР. ОРИЕНТИР ДЛЯ ПЕРВОЙ ПРОБЫ.</p>
+    <h1 id="result-title" tabindex="-1"></h1><p id="result-intro" class="lead"></p>
+    <div class="result-grid"><article class="result-card"><p class="card-kicker">ЧТО МЫ ЗАМЕТИЛИ</p><h2>Твои интересы сейчас</h2><ul id="reasons" class="reasons"></ul><div id="interest-tags" class="interest-tags"></div><p class="fine">Сопоставляем выбранные варианты, а не измеряем способности. Опыт и настроение могут менять ответы.</p></article>
+    <article class="result-card trial-card"><p class="card-kicker">ПОПРОБУЙ БЕЗ ПОКУПКИ</p><h2 id="trial-title"></h2><p id="trial-body"></p><div class="trial-prompt" id="trial-prompt"></div><p id="course-hint" class="fine"></p></article></div>
+    <section class="consult-result"><div><span class="pill">Бесплатная консультация</span><h2>Разберём результат вместе?</h2><p>Поможем сравнить направления и выбрать первую пробу. Необязательно покупать курс или уже иметь портфолио.</p><ol><li>Скопируй краткий итог.</li><li>Открой Telegram и отправь его команде школы.</li><li>Напиши, какой вопрос хочешь обсудить.</li></ol></div><div class="result-actions"><button id="copy-result" class="button secondary">Скопировать итог</button><a class="button primary consultation-link" href="https://t.me/AvenzaireEDU" target="_blank" rel="noopener noreferrer">Хочу консультацию <span aria-hidden="true">↗</span></a><a id="bot-link" class="button secondary" hidden href="#">Вернуться в бот →</a><p id="copy-status" class="fine" role="status" aria-live="polite">Ответы не отправляются автоматически. Решение поделиться итогом — твоё.</p><details><summary>Показать итог для ручного копирования</summary><textarea id="summary-text" readonly aria-label="Краткий итог для копирования" rows="8"></textarea></details></div></section>
+    <div class="result-bottom"><button id="change-answers" class="quiet">← Пересмотреть ответы</button><button id="restart" class="quiet">Начать заново</button></div>
+    <p class="result-disclaimer">Это учебный опрос по интересам, не профессиональная или психологическая диагностика, не оценка интеллекта и не гарантия профессии, дохода или трудоустройства.</p>
+  </section>
+  <noscript><div class="noscript"><h2>Для опросника нужен JavaScript</h2><p>Можно сразу написать о бесплатной консультации в Telegram: <a href="https://t.me/AvenzaireEDU">@AvenzaireEDU</a>. Пароли, номера телефонов и другие личные данные для опросника не нужны.</p></div></noscript>
+</main>
+<footer class="site-footer wrap"><span>AVENZAIRE ACADEMY <span class="footer-dot">/</span> Твой первый шаг</span><button class="quiet" data-open-privacy>Как устроен опросник и данные</button></footer>
+<dialog id="privacy-dialog" aria-labelledby="privacy-title"><div class="dialog-inner"><h2 id="privacy-title">Твои ответы — в этой вкладке</h2><p>Нет регистрации, форм с телефоном, cookies, рекламных пикселей или аналитических скриптов. Ответы находятся в оперативной памяти браузера и исчезают после обновления или закрытия страницы. Они не отправляются школе автоматически.</p><p>Результат — простое сопоставление интересов к коду и дизайну. Это не диагностика способностей. При смешанных ответах предлагаем обе пробы; «не знаю» не считается недостатком.</p><p>Сайт размещается на GitHub Pages. Сам хостинг обрабатывает обычные технические запросы к страницам по своим правилам; это не означает абсолютную анонимность. При переходе в Telegram действуют его правила. Отправленный вручную итог и сообщение увидит команда школы.</p><p>Для консультации достаточно вопроса об интересах. Не отправляй пароли, коды, токены, адрес, номер школы и личные истории. Если нужна помощь взрослого, можно обсудить результат вместе с ним.</p><button id="close-privacy" class="button primary">Понятно</button></div></dialog>
+</body>
+</html>
