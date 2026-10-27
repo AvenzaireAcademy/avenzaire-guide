@@ -6,7 +6,7 @@ const validUsername=v=>typeof v==='string'&&/^[A-Za-z][A-Za-z0-9_]{4,31}$/.test(
 const contact=validUsername(config.consultationUsername)?config.consultationUsername:'AvenzaireEDU';
 document.querySelectorAll('.consultation-link').forEach(a=>{a.href='https://t.me/'+contact});
 if(validUsername(config.botUsername)){$('bot-link').href='https://t.me/'+config.botUsername+'?start=direction';$('bot-link').hidden=false}
-function view(id){['intro','quiz','result'].forEach(name=>$(name).hidden=name!==id);window.scrollTo({top:0,behavior:'instant'})}
+function view(id){document.body.dataset.view=id;['intro','quiz','result'].forEach(name=>$(name).hidden=name!==id);window.scrollTo({top:0,behavior:'instant'})}
 function renderQuestion(){
  const q=questions[current];$('question-count').textContent=`Вопрос ${current+1} из ${questions.length}`;$('question-title').textContent=q.title;$('question-category').textContent=q.category;$('question-hint').textContent=q.hint;
  const progress=document.querySelector('.progress-track');progress.setAttribute('aria-valuenow',String(current));$('progress-fill').style.width=`${current/questions.length*100}%`;
@@ -23,7 +23,9 @@ function renderResult(){
  $('reasons').replaceChildren(...result.reasons.map(t=>{const li=document.createElement('li');li.textContent=t;return li}));$('interest-tags').replaceChildren(...o.tags.map(t=>{const span=document.createElement('span');span.textContent=t;return span}));
  $('summary-text').value=summaryFor(result);$('copy-status').textContent='Ответы не отправляются автоматически. Решение поделиться итогом — твоё.';$('copy-result').textContent='Скопировать итог';view('result');$('result-title').focus({preventScroll:true});
 }
-$('start').addEventListener('click',()=>{view('quiz');renderQuestion()});
+const startQuiz=()=>{view('quiz');renderQuestion()};
+$('start').addEventListener('click',startQuiz);
+document.querySelectorAll('[data-start-quiz]').forEach(button=>button.addEventListener('click',startQuiz));
 $('next').addEventListener('click',()=>{if(answers[current]===null){$('selection-error').hidden=false;return}if(current===questions.length-1){renderResult();return}current++;renderQuestion();window.scrollTo({top:0,behavior:'instant'})});
 $('back').addEventListener('click',()=>{if(current>0){current--;renderQuestion();window.scrollTo({top:0,behavior:'instant'})}});
 $('exit-quiz').addEventListener('click',()=>{view('intro');$('start').textContent='Продолжить опрос →';$('start').focus({preventScroll:true})});

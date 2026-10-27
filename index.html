@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0b10">
+  <meta name="theme-color" content="#111110">
   <meta name="description" content="Не знаешь, что выбрать: код или дизайн? 10 спокойных вопросов помогут наметить первый шаг. Бесплатная консультация Avenzaire Academy — без обязательной покупки.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>Найди свой первый шаг · Avenzaire Academy</title>
@@ -14,33 +14,50 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
-<div class="ambient" aria-hidden="true"></div>
+
 <header class="site-header wrap">
   <a class="brand" href="./" aria-label="Avenzaire Academy — начало"><img src="./assets/brand.png" width="176" height="115" alt="Avenzaire Academy"></a>
-  <div class="header-right"><span class="availability"><span aria-hidden="true"></span> Бесплатно</span><button class="quiet" data-open-privacy>О данных</button></div>
+  <nav class="intro-nav" aria-label="По странице"><a href="#how">Как это работает</a><a href="#paths">Направления</a><a href="#consult">Консультация</a></nav><div class="header-right"><span class="availability"><span aria-hidden="true"></span> Бесплатно</span><button class="quiet" data-open-privacy>О данных</button></div>
 </header>
-<main id="main" class="wrap" tabindex="-1">
+<main id="main" tabindex="-1">
   <section id="intro" aria-labelledby="hero-title">
-    <div class="hero-grid">
+    <div class="hero-grid wrap">
       <div class="hero-copy">
-        <p class="eyebrow">НАПРАВЛЕНИЕ НАЧИНАЕТСЯ С ИНТЕРЕСА</p>
-        <h1 id="hero-title">Не выбирай<br><span>вслепую.</span></h1>
-        <p class="lead">Код, дизайн или пока «не знаю»?<br>Давай найдём то, что хочется попробовать.</p>
-        <p class="hero-note">10 коротких вопросов — и понятный первый шаг. А если останутся сомнения, разберём их на бесплатной консультации.</p>
-        <button id="start" class="button primary">Найти свой первый шаг <span aria-hidden="true">↗</span></button>
-        <div class="hero-meta"><span>3–4 минуты</span><span>Без регистрации</span><span>Без обязательной покупки</span></div>
+        <p class="eyebrow"><span class="short-rule"></span> ТВОЙ ПЕРВЫЙ ШАГ В IT</p>
+        <h1 id="hero-title">ОТ ИНТЕРЕСА<br><span>К СВОЕМУ<br>НАПРАВЛЕНИЮ.</span></h1>
+        <p class="lead">Код, дизайн или пока «не знаю»?<br>Начни не с выбора профессии. Начни с себя.</p>
+        <div class="hero-buttons"><button id="start" class="button primary">Найти свой первый шаг <span aria-hidden="true">↗</span></button><a class="text-link" href="#paths">Посмотреть направления <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-meta">10 вопросов <span>·</span> 3–4 минуты <span>·</span> Бесплатно</p>
       </div>
-      <div class="hero-art" aria-label="Код, дизайн и возможность сначала попробовать">
+      <div class="hero-art" aria-label="Учебные эскизы: программа, сайт и приложение">
         <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
-        <div class="glass-title"><span class="status-light" aria-hidden="true"></span> ТВОЯ ТОЧКА СТАРТА</div>
-        <div class="path-card code-card"><span class="metal-icon" aria-hidden="true">&lt;/&gt;</span><div><span class="card-kicker">РАЗОБРАТЬСЯ, КАК РАБОТАЕТ</span><h2>Создавать код</h2><p>Логика. Эксперименты. Свои программы.</p></div></div>
-        <div class="path-card design-card"><span class="metal-icon" aria-hidden="true">✳</span><div><span class="card-kicker">СДЕЛАТЬ ПОНЯТНЕЕ И УДОБНЕЕ</span><h2>Проектировать дизайн</h2><p>Экраны. Сценарии. Детали.</p></div></div>
-        <div class="floating-note"><span aria-hidden="true">↗</span> Не знать заранее — нормально.</div>
-        <div class="art-footer"><span class="mini-dots" aria-hidden="true">● ● ●</span> Не ярлык. Начало пути.</div>
+        <div class="art-coordinate" aria-hidden="true">ИНТЕРЕС → ПРОБА → ПЕРВЫЙ ШАГ</div>
+        <div class="mock-window mock-code" aria-hidden="true"><div class="window-bar"><span class="window-dots">● ● ●</span><span>FIRST_STEP.C</span><span>↗</span></div><div class="code-content"><span class="mock-kicker">COMPUTER SCIENCE</span><h2>ИДЕЯ СТАНОВИТСЯ<br>ПРОГРАММОЙ.</h2><pre><span>#include</span> &lt;stdio.h&gt;
+
+int main(void) {
+  int minutes = 60;
+  int tasks = 4;
+  printf("%d min", minutes / tasks);
+  return 0;
+}</pre><div class="terminal-result"><span>➜ ./first-step</span><strong>15 min <span class="terminal-caret">▌</span></strong></div></div></div>
+        <div class="mock-window mock-design" aria-hidden="true"><div class="window-bar"><span>МЕЖДУ СТРОК / УЧЕБНЫЙ ЭСКИЗ</span><span>МЕНЮ ↗</span></div><div class="design-content"><p>КНИГИ. ЛЮДИ. ВСТРЕЧИ.</p><h2>ЧИТАТЬ.<br>ЧУВСТВОВАТЬ.<br>ОБСУЖДАТЬ.</h2><div class="design-bottom"><span>Найди свою историю.</span><span class="mock-pill">К программе ↗</span></div><div class="book book-one"></div><div class="book book-two"></div></div></div>
+        <div class="mock-window mock-mobile" aria-hidden="true"><div class="mobile-top">9:41 <span>● ▰</span></div><p>ТВОЙ РИТМ</p><h2>ЕСТЬ<br>ПЛАН.</h2><div class="mini-task"><span>✓</span> Найти идею</div><div class="mini-task"><span>○</span> Попробовать</div><div class="mini-task"><span>○</span> Сделать своё</div><div class="mobile-plus">＋</div></div>
+        <p class="art-caption">Учебные эскизы · не работы учеников</p>
       </div>
     </div>
-    <div class="trust-strip"><p><strong>Сначала — ты, не курс.</strong><span>Посмотрим на интересы, а не на «правильные» ответы.</span></p><p><strong>Проба вместо обещаний.</strong><span>Предложим маленькое действие, а не профессию навсегда.</span></p><p><strong>Человек рядом.</strong><span>Можно обсудить результат с командой школы.</span></p></div>
-    <section class="consult-section" aria-labelledby="consult-title"><div><p class="eyebrow">МОЖНО СРАЗУ ПОГОВОРИТЬ</p><h2 id="consult-title">Не тест решает.<br>Решаешь ты.</h2></div><div><p>На бесплатной консультации обсудим, что тебе интересно, чем отличаются направления и с какой небольшой задачи начать. Проходить опросник необязательно.</p><a class="button secondary consultation-link" href="https://t.me/AvenzaireEDU" target="_blank" rel="noopener noreferrer">Написать о консультации <span aria-hidden="true">↗</span></a><p class="fine">Начнём с переписки в Telegram. Формат и время согласуем отдельно. Мгновенный ответ не обещаем.</p></div></section>
+    <div class="facts-strip wrap"><div class="section-index">(01)</div><p>Не нужно знать<br><strong>ответ заранее.</strong></p><p><strong>Без регистрации.</strong><br>Ответы — только в этой вкладке.</p><p><strong>Без обязательной покупки.</strong><br>Первую пробу можно сделать бесплатно.</p><span class="facts-arrow" aria-hidden="true">↓</span></div>
+    <section id="how" class="process-section" aria-labelledby="how-title"><div class="wrap"><div class="section-top"><span class="section-index">(02)</span><p class="eyebrow">ПОНЯТНЫЙ ПУТЬ, БЕЗ СПЕШКИ</p></div><h2 id="how-title" class="section-title">КАК НАЙТИ СВОЁ?</h2><div class="process-grid">
+      <article><span class="step-icon" aria-hidden="true">?</span><span class="step-number">01</span><h3>Прислушайся</h3><p>Ответь на 10 вопросов о том, что тебе любопытно. Правильных ответов нет.</p></article>
+      <article><span class="step-icon" aria-hidden="true">↗</span><span class="step-number">02</span><h3>Получи ориентир</h3><p>Код, дизайн, обе пробы или знакомство. Это не диагноз и не выбор навсегда.</p></article>
+      <article><span class="step-icon" aria-hidden="true">&lt;/&gt;</span><span class="step-number">03</span><h3>Попробуй руками</h3><p>Небольшая задача без покупки курса и установки сложных инструментов.</p></article>
+      <article><span class="step-icon" aria-hidden="true">↔</span><span class="step-number">04</span><h3>Обсуди с нами</h3><p>Если остались вопросы — разберём их на бесплатной консультации в Telegram.</p></article>
+    </div></div></section>
+    <section id="paths" class="paths-section wrap" aria-labelledby="paths-title"><div class="section-top"><span class="section-index">(03)</span><p class="eyebrow">РАЗНЫЕ СПОСОБЫ СОЗДАВАТЬ</p></div><div class="section-heading"><h2 id="paths-title" class="section-title">ЧТО ТЕБЕ БЛИЖЕ?</h2><p>Не нужно выбирать сейчас.<br>Можно сначала познакомиться с обоими путями.</p></div><div class="paths-grid">
+      <article class="direction-card"><div class="direction-visual visual-code" aria-hidden="true"><span class="visual-label">01 / КОД</span><strong>МЫСЛИТЬ.<br>ПИСАТЬ.<br><em>ЗАПУСКАТЬ.</em></strong><div class="visual-terminal"><span>➜ run my_idea</span><span class="terminal-status">Всё начинается с первой строки.</span></div></div><div class="direction-info"><h3>Computer Science</h3><span aria-hidden="true">↗</span></div><p>Понять логику программы и собрать свой небольшой инструмент.</p><button class="card-link" data-start-quiz>Подойдёт ли мне код? <span aria-hidden="true">↗</span></button></article>
+      <article class="direction-card"><div class="direction-visual visual-design" aria-hidden="true"><span class="visual-label">02 / ДИЗАЙН</span><strong>МЕНЬШЕ ШУМА.<br>БОЛЬШЕ<br>СМЫСЛА.</strong><div class="mini-layout"><span class="layout-hero"></span><span></span><span></span><span></span></div></div><div class="direction-info"><h3>Дизайн в Figma</h3><span aria-hidden="true">↗</span></div><p>Делать понятные экраны, продумывать действия и собирать прототипы.</p><button class="card-link" data-start-quiz>Подойдёт ли мне дизайн? <span aria-hidden="true">↗</span></button></article>
+      <article class="direction-card"><div class="direction-visual visual-both" aria-hidden="true"><span class="visual-label">03 / ПОИСК</span><strong>ПОКА<br>НЕ ЗНАЕШЬ?<br><em>ЭТО ОК.</em></strong><div class="cross-path">КОД <span>↔</span> ДИЗАЙН</div></div><div class="direction-info"><h3>Сначала попробовать</h3><span aria-hidden="true">↗</span></div><p>Сравнить две маленькие практики и заметить, что хочется продолжить.</p><button class="card-link" data-start-quiz>Найти первую пробу <span aria-hidden="true">↗</span></button></article>
+    </div><p class="paths-note">Показываем подход к направлениям, а не обещаем профессию или доход. GitHub можно изучать отдельно как бесплатный навык работы с проектами.</p></section>
+    <section id="consult" class="consult-section wrap" aria-labelledby="consult-title"><div><p class="section-index">(04) / БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</p><h2 id="consult-title" class="section-title">НЕ ТЕСТ РЕШАЕТ.<br><span>РЕШАЕШЬ ТЫ.</span></h2></div><div class="consult-copy"><p>Расскажи, что тебе интересно. Поможем сравнить направления и выбрать небольшую задачу для старта. Опросник проходить необязательно.</p><a class="button primary consultation-link" href="https://t.me/AvenzaireEDU" target="_blank" rel="noopener noreferrer">Обсудить первый шаг <span aria-hidden="true">↗</span></a><p class="fine">Начнём с переписки в Telegram. Формат и время согласуем отдельно. Без обязательной покупки; мгновенный ответ не обещаем.</p></div></section>
   </section>
 
   <section id="quiz" class="quiz-view" hidden aria-labelledby="question-title">
